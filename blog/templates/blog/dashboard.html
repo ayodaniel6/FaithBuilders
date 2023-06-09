@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <title>Dashboard</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+    <main class="container-fluid">
+        
+        <div class="container-md dashboard">
+            <h1 class="text-center">Dashboard</h1>
+
+            <div class="row">
+                <aside class="col-3 side-bar">
+                    <div class="profile">
+                        <img src="" alt="">
+                        <h4>Daniel</h4>
+                    </div>
+
+                    <hr>
+                    
+                    <ul>
+                        <li>
+                            <a aria-current="page" href="{% url 'blog:create' %}">Create Post</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'blog:draft' %}">Drafts</a>
+                        </li>
+                        <li id="logout">
+                            <a href="{% url 'blog:logout' %}" class="nav-link">Log Out</a>
+                        </li>
+                    </ul>
+                </aside>
+    
+                <section class="col-9 staff-post">
+                    {% if post.published %}
+                        <a href="">Published Posts : {{ post.count }}</a>
+                    {% else %}
+                        <a href="">Created Posts : {{ post.object.all }}</a>
+                    {% endif %}
+                </section>
+            </div>
+    
+
+            </div>
+
+           
+    </main>
+
+{% endblock %}

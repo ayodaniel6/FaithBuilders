@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <title>Staff</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<main class="container-fluid">
+
+    <div class="container-md">
+
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="" alt="" srcset="">
+            </div>
+
+            <div class="col-md-6 staff-login">
+                <div>
+                    <a href="{% url 'home:home' %}"><i class="fa fa-arrow-circle-left"></i> Home</a>
+                </div>
+                <div>
+                    <h1 class="text-center">Login</h1>
+                    <form method="POST">
+                        <label class="form-label" for="username">Username :</label>
+                        <input class="form-control" type="text" name="username" placeholder="Enter username...">
+                
+                        <label class="form-label" for="password">Password :</label>
+                        <input class="form-control" type="password" name="password">
+                
+                        <input type="submit" value="Login" class="btn btn-primary">
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
+
+{% endblock %}

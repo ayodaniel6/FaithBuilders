@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+  <title>About</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<main class="container-fluid">
+
+  <!-- Hero for the About Page -->
+
+  <section class="hero-container">
+
+  </section>
+
+  <!-- About Page Write Up -->
+
+  <section class="container-fluid about">
+    <div class="container-md about-content">
+      <h1><span>About</span> Page</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Numquam, nisi? Odio dolorem ducimus,
+        accusantium non repudiandae magni, quibusdam impedit eligendi 
+        tenetur vitae facilis excepturi cum nulla minima eum molestias 
+        corrupti? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Molestias, eum id! Aliquid amet, ducimus culpa nesciunt ut id earum 
+        unde iusto exercitationem temporibus labore eaque voluptatem vel porro officia. 
+        Corporis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam vitae quos earum, 
+        asperiores quisquam quia magnam saepe necessitatibus reiciendis aspernatur quasi in illum adipisci, 
+        voluptatem ut. Dignissimos inventore aperiam eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Odit recusandae aperiam numquam explicabo. Sit qui corrupti, numquam quibusdam ex explicabo quasi rerum magni 
+        fuga asperiores accusantium, ad totam consequuntur saepe.
+      </p>
+    </div>
+    </section>
+
+  <section class="container-fluid newsletter">
+
+    <div class="container-md">
+
+      <div class="row justify-content-center">
+
+          <div class="col-md-6">
+            <h1>Stay <span>Connected!</span></h1>
+  
+            <div class="card">
+    
+              <form method="POST">
+                {% csrf_token %}
+        
+                <div>
+                  <h2>Subscribe to our Newsletter</h2>
+                </div>
+        
+                <div class="card-body">
+                  <label>Your name:
+                    <input class="form-control" type="text" name="name" id="name" required placeholder="First name">
+                  </label>
+        
+                  <label>Email Address:
+                    <input class="form-control" type="email" name="email" id="email" required >
+                  </label>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        
+                  <input type="submit" value="Subscribe">
+                  
+                </div>
+        
+              </form>
+        
+            </div>
+
+          </div>
+    
+        </div>
+
+      </div>
+
+
+  </section>
+
+</main>
+
+{% block footer %}
+
+{% endblock %}
+
+{% endblock %}

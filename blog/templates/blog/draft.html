@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>Draft</title>
+</head>
+{% extends 'base.html' %}
+
+{% block contents %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/draft.css' %}">
+
+<main class="container-fluid">
+
+  <div class="container-md">
+    <div>
+      <h1>Drafts</h1>
+    </div>
+  
+    <section class="row">
+  
+      <div class="col-8">
+  
+    {% if posts %}
+  
+      {% for post in posts %}
+  
+      <p>created : {{ post.created|date:'Y-m-d' }}</p>
+      <h1><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      <p>{{ post.article|truncatechars:200 }}</p>
+  
+        <a class="publish" href="{% url 'blog:publish' pk=post.pk %}">
+            Publish
+        </a>
+  
+      {% endfor %}
+  
+      {% else %}
+  
+      <p><em>No Drafts</em></p>
+  
+      {% endif %}
+  
+    </div>
+  
+    </section>
+
+  </div>
+
+  </main>
+
+{% endblock %}

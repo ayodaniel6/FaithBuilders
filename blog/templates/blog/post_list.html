@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title>Awake</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+
+<main class="container-fluid">
+
+    <div class="container">
+
+        <div>
+            <h1>Post</h1>
+        </div>
+        
+        <article class="row">
+
+            <div class="col-9">
+    
+                {% for post in posts %}
+        
+                <h3><a class="text-center" href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+                <small>Published : {{ post.published|date:'Y-m-d' }}</small>
+
+                <div class="article-body">
+                    <p>{{ post.article|truncatechars:300 }}</p>
+                </div>
+
+                <div class="article-image">
+                    <img src="{{ post.image }}" alt=""></img>
+                </div>
+                {% endfor %}
+    
+            </div>
+            
+            <aside class="col-3">
+            <!-- Side bar  { Archives }-->
+            <h4>On this Page</h4>
+            <hr>
+                <div class="row">
+                    {% for post in posts %}
+                    <ul>
+                        <li><a class="text-center" href="{% url 'blog:post_detail' pk=post.pk %}">
+                            <em>{{ post.title }}</em>
+                        </a></li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </aside>
+        </article>
+    </div>
+
+</main>
+
+
+{% block footer %}
+
+{% endblock %}
+
+{% endblock %}

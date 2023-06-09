@@ -1,0 +1,61 @@
+/* Nav */
+
+header{
+    position: static;
+    background-color: #0C3A5B;
+    padding: 10px 0;
+}
+
+.navlink{
+    margin: 0;
+}
+
+/* Body */
+
+main {
+    padding: 20px 0;
+    min-height: 100vh;
+}
+
+main div > h1{
+    color: #1F7CB7;
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+
+}
+
+main div > h3 a{
+    display: block;
+    text-decoration: none;
+    color: #1F7CB7;
+}
+
+.article-image{
+    width: 100%;
+    height: auto;
+}
+
+aside h4{
+    font-size: 1.2rem;
+    color: #3FA7E1;
+    display: block;
+    text-align: center;
+}
+
+div ul li{
+    display: block;
+    text-align: center;
+    list-style: none;
+}
+
+div ul li a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #181818;
+}
+
+div ul li a:hover{
+    color: #3FA7E1;
+}
+

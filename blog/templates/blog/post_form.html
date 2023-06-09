@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>Update</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+<link rel="stylesheet" href="{% static 'css/post_form.css' %}">
+
+<main class="container-fluid">
+
+    <div class="container-md post-form">
+        <div class="row">
+
+            <aside class="col-3 side-bar">
+                <div class="profile">
+                    <img src="" alt="">
+                    <h4>Daniel</h4>
+                </div>
+    
+                <hr>
+                
+                <ul>
+                    <li>
+                        <a aria-current="page" href="{% url 'blog:create' %}">Create Post</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blog:draft' %}">Drafts</a>
+                    </li>
+                    <li id="logout">
+                        <a href="{% url 'blog:logout' %}" class="nav-link">Log Out</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="col-9">
+                {% if posts.created %}
+    
+                <div>
+                    <h1>Update Post</h1>
+                </div>
+        
+                <form method="POST" class="form-control">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input class="btn btn-primary" type="submit" value="Update">
+                </form>
+            
+                {% else %}
+            
+                <div>
+                    <h1>Create Post</h1>
+                </div>
+            
+                <form method="POST" class="form-control">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input class="btn btn-primary" type="submit" name="Create" value="Create">
+                </form>
+            
+                {% endif %}
+    
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<!-- <div class="editable"></div> -->
+<script>var editor = new MediumEditor('.editable');</script>
+
+{% endblock %}

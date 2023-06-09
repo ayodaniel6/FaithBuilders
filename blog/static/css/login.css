@@ -1,0 +1,37 @@
+/* Nav */
+
+header{
+    position: static;
+    background-color: #0C3A5B;
+    padding: 10px 0;
+}
+
+.navlink{
+    margin: 0;
+}
+
+/* Body */
+
+main {
+    padding: 20px 0;
+    min-height: 100vh;
+}
+
+.staff-login h1{
+    font-size: 3rem;
+    color: #0C3A5B;
+}
+
+
+input[type='submit']{
+    margin: 10px;
+    float: right;
+    color: #fff;
+    background-color: #0C3A5B;
+    border: none;
+    outline: none;
+}
+
+input[type='submit']:hover{
+    background-color: #062847;
+}

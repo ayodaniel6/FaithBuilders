@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<!-- Custom Css -->
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+     
+
+<!-- Hero -->
+
+    <main class="container-fluid">
+
+      <div class="hero-container">
+
+        <div class="container-md">
+          <div class="hero">
+            <h2>Reconnect</h2>
+            <h4>with your</h4>
+            <h1>Family</h1>
+            <a href="{% url 'home:about' %}">Meet your Family Counsellor</a>
+          </div>
+        </div> 
+
+      </div>
+      
+        <!-- Walls -->
+
+        <section class="container-md walls">
+          <div class="row align-items-center">
+            <h1 class="text-center">Broken <span>walls</span> of Homes</h1>
+            <div class="col-md-6">
+              <p><span>L</span>orem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Vel ad sapiente rem nobis mollitia totam optio temporibus nemo. 
+                  Est perspiciatis repudiandae consectetur, eum deleniti nostrum ullam molestias delectus sapiente tempore.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, magni voluptates. Voluptatibus consectetur fugit 
+                  consequatur labore accusantium obcaecati animi, iste nisi cum, neque, quisquam non asperiores eaque aliquam tenetur.
+                  Aliquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto distinctio pariatur libero facilis iste expedita,
+                  voluptas modi deserunt? In quaerat, ipsam aspernatur eveniet ut necessitatibus natus iure. Ab, debitis.
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur molestiae, cum provident iste, explicabo aliquid animi quaerat sapiente eaque nihil, 
+                  distinctio voluptatem cupiditate veniam dolore alias asperiores esse numquam accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, 
+                  accusantium id? Nisi, deleniti? Voluptate ab hic atque itaque! Alias temporibus cumque repudiandae iste necessitatibus voluptate perspiciatis explicabo quae hic at!
+              </p>
+            </div>
+  
+            <div class="col-md-6">
+              <img src="{% static 'images/undraw_family_vg76.png' %}" alt="">
+            </div>
+
+          </div>
+          
+      </section>
+
+      <!-- Blog Posts -->
+
+      <section class="container-md post">
+          <div class="row align-items-center">
+
+            {% for post in posts %}
+
+            {% if post.published %}
+
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ post.title }}</h5>
+                  <p class="card-text">{{ post.article|truncatechars:200}}</p>
+                  <a href="{% url 'blog:post_detail' pk=post.pk %}" class="blog-btn">Read more...</a>
+                </div>
+              </div>   
+            </div>
+
+          {% endif %}
+
+          {% endfor %}
+
+      </section>
+
+      <!-- Omoge Initiatives -->
+
+      <section class="container-fluid">
+        <div class="container-md omoge">
+          <h1 class="text-center">Looking to <span>Grow?</span></h1>
+          <div class="row align-items-center">
+
+            <div class="col-md-6">
+              <img src="{% static 'images/Innovation_Flatline.png' %}" alt="">
+            </div>
+
+            <div class="col-md-6">
+              <p>Acquire a skill and get connected! with the <span><a href="#"><em>Omoge initiative</em></a></span> helping you get to your full potential. Lorem ipsum dolor, 
+                  sit amet consectetur adipisicing elit. Dolores voluptatum fuga minus iusto qui omnis cumque facere molestiae perspiciatis. 
+                  Sint maxime reiciendis a exercitationem possimus autem corporis, expedita rem at! Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                  Voluptatum eaque fugiat omnis assumenda nemo totam quidem magni illum, sint ipsum quasi expedita quae aspernatur 
+                  possimus repellendus perferendis officiis doloribus accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum necessitatibus nemo impedit. 
+                  Earum recusandae iusto adipisci quod. Maiores minima voluptates itaque illo eos eligendi sit facere, quas possimus error vitae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit assumenda, laudantium totam esse nobis praesentium impedit suscipit nihil eveniet quidem maxime enim officiis explicabo, 
+                  sed asperiores expedita fuga ad quisquam.</p>
+                  <a role="button" class="apply-button" href="#">Apply</a>
+            </div>
+
+          </div>
+        </div>
+        <img width="100%" src="{% static 'images/composition.png' %}" alt="">
+      </section>
+
+      <!-- Newsletter -->
+
+      <section class="container-md">
+        <div class="row newsletter">
+
+          <h1 class="text-center"><span>Join</span> our Newsletter</h1>
+
+              <div class="col">
+                <img src="{% static 'images/stacking-hands.png' %}" alt="">
+              </div>
+            
+              <div class="col">
+                <div class="newsletter-form">
+                  
+                    <h2>Subscribe to our Newsletter</h2>
+                      
+                      <form method="POST">
+      
+                        <label class="form-label" id="label" for="email">Email Address:</label>
+                        <input class="form-control form-input" type="email" name="email" placeholder="Email address">
+        
+                        <input class="btn btn-primary form-button" type="submit" value="Subscribe">
+        
+                      </form>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+      </section>
+
+      <!-- Testimonials -->
+
+      <section class="container-fluid testimonial-section">
+
+        <div class="container-md">
+          <h1>What people say about us</h1>
+          <div class="row">
+
+              <div class="col testimonials">
+                <div class="header">
+                  <img src="{% static 'images/bandmember.jpg' %}" class="card-img-top" alt="...">
+                  <h4>Chris Fox</h4>
+                </div>
+                  <div class="text">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsam et facere impedit doloremque laborum assumenda mollitia molestiae, reiciendis id ex natus, animi earum pariatur, fugit ab error nemo dolorem!</p>
+                  </div>
+                </div>
+
+                <div class="col testimonials">
+                  <div class="header">
+                    <img src="{% static 'images/female_avatar.png' %}" class="card-img-top" alt="...">
+                    <h4>Rebecca Flex</h4>
+                  </div>
+                    <div class="text">
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, possimus voluptatum ipsa modi et quibusdam qui, eius adipisci tempora placeat ea doloribus quo. Inventore iusto nostrum iste velit voluptatibus sunt!</p>
+                    </div>
+                  </div>
+
+                  <div class="col testimonials">
+                    <div class="header">
+                      <img src="{% static 'images/avatar_g2.jpg' %}" class="card-img-top" alt="...">
+                      <h4>Jack Sparrow</h4>
+                    </div>
+                      <div class="text">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, ullam quae magnam, atque voluptatem totam optio molestiae ipsum quia neque beatae esse cupiditate quibusdam laboriosam aspernatur dolorem nihil placeat impedit.</p>
+                      </div>
+                    </div>
+
+            </div>
+
+        </div>
+
+      </section>
+
+      </main>
+
+      {% endblock %}
+
+      <!-- Footer -->
+
+      {% block footer %}
+
+      {% endblock %}
+
+</body>
+</html>
+

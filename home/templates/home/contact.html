@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact</title>
+</head>
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+<main class="container-fluid">
+
+    <section class="hero-container">
+
+    </section>
+
+    <section class="container-fluid contact-information">
+        <div class="container">
+            <h2><span>Contact</span> Information</h2>
+            <!-- Include your contact information here -->
+            <p>Name: John Doe</p>
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Main Street, City, State, Zip</p>
+        </div>
+    </section>
+
+    <section class="container-fluid appointment">
+        <div class="container">
+            <div>
+                <h2>Make an <span>Appointment</span></h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                
+                        <div class="card-body">
+                            <form method="post">
+                                {{ form.as_p }}
+                                {% csrf_token %}
+                                <input type="submit" class="btn btn-primary" value="Request">
+                            </form>
+                        </div>          
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    
+    <section class="container-fluid contact-social-media">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center"><span>Social</span> Media</h2>
+                            <!-- Include links to your social media profiles here -->
+                            <ul class="list-group list-group-flush">
+                                <a class="list-group-item" href="https://www.facebook.com/example" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+                                <a class="list-group-item" href="https://twitter.com/example" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                                <a class="list-group-item" href="https://www.instagram.com/example" target="_blank"><i class="fa fa-instagram"></i> Instagram</a>
+                                <a class="list-group-item" href="https://www.youtube.com/example" target="_blank"><i class="fa fa-youtube"></i> YouTube</a>
+                            </ul>
+                   
+                </div>
+        
+                <div class="col">
+                    <img src="" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="frequent-question">
+        <!-- Frequently Asked Questions (FAQ) -->
+    </section>
+
+    <section class="container-fluid prayer-request">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2>Prayer <span>Requests</span></h2>
+                    <form method="POST">
+                        {% csrf_token %}
+        
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+            
+                        <div class="mb-3">
+                            <label for="request" class="form-label">Request</label>
+                            <textarea class="form-control" id="request" rows="5"></textarea>
+                        </div>
+                        <div id="request" class="form-text">Write as much as you can.</div>
+
+                        <input type="button" class="btn" value="Submit">
+            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <!-- Maps for directions -->
+    </section>
+
+</main>
+
+{% endblock %}

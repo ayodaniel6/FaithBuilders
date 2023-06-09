@@ -1,0 +1,121 @@
+/* Global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Image */
+
+.hero-container {
+    background-image: url("Happy_Family2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    position: fixed;
+}
+
+/* About Section */
+
+.about{
+    width: 100vw;
+    height: 50vh;
+    background-color: #fff;
+    margin-top: 25%;
+    padding: 20px 0;
+}
+
+.about h1{
+    font-size: 3rem;
+}
+
+.about h1 span{
+    color: #fff;
+    background-color: #0C3A5B;
+    padding: 3px 8px;
+    border-radius: 15px;
+    outline: none;
+    display: inline-block;
+}
+
+/* Form */
+
+.newsletter {
+    box-sizing: border-box;
+    background-color: #dfe9f5;
+    width: 100vw;
+    height: 60vh;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.newsletter h1{
+    text-align: center;
+}
+
+.card-body{
+    display: block;
+    text-align: center;
+}
+
+.card-body label{
+    text-align: left;
+}
+
+form input[type="submit"]{
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 3px 8px;
+    color: #fff;
+    background-color: #0C3A5B;
+    border-radius: 8px;
+}
+
+form div > h2{
+    background-color: #0C3A5B;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Footer */
+
+footer{
+    background-color: #181818;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0.8;
+    align-items: center;
+}
+
+.footer-links a{
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer button{
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    width: 60%;
+}
+

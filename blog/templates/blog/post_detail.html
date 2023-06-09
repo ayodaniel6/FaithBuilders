@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>Awake</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+
+<main class="container-fluid">
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+
+                {% if post.published %}
+                <div>
+                    <h1>{{ post.title }}</h1>
+                </div>
+
+                <small>{{ post.published|date:'Y-m-d' }}  |  {{ post.author }}</small>
+
+                <img src="{{ post.image }}" alt="">
+
+                <p class="lead post-content">{{ post.article|safe }}</p>
+
+                <audio src="{{ post.audio }}"></audio>
+
+                {% else %}
+
+                <div>
+                    <h1>{{ post.title }}</h1>
+                </div>
+
+                <small>{{ post.created|date:'Y-m-d' }}  |  {{ post.author }}</small>
+
+                <img src="{{ post.image }}" alt="">
+
+                <p class="lead post-content">{{ post.article|safe }}</p>
+
+                <audio src="{{ post.audio }}"></audio>
+
+                {% endif %}
+
+                <div>
+                    {% if user.is_authenticated %}
+                    <hr>
+
+                    <a role="button" class="btn btn-primary" href="{% url 'blog:publish' pk=post.pk %}">Publish</a>
+
+                    <div>
+                        <a role="button" class="btn btn-warning" href="{% url 'blog:update' pk=post.pk %}">Update</a>
+            
+                        <a role="button" class="btn btn-danger" href="{% url 'blog:delete' pk=post.pk %}">Delete</a>
+                    </div>
+
+                </div>
+
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</main>
+
+{% endblock %}

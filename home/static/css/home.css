@@ -1,0 +1,292 @@
+
+/* Global styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Raleway',sans-serif;
+}
+
+/* Navigation styles */
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    padding: 0;
+    top: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+    list-style: none;
+    display: inline-flex;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover, .active{
+    color: #0C3A5B;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 3px 8px;
+}
+
+.brand {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+/* Hero styles */
+
+.hero-container {
+    background-image: url('Hero_image.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh; 
+}
+
+.hero{
+    position: relative;
+    color: #ffffff;
+    text-align: justify;
+    top: 30vh;
+}
+
+.hero h2{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero h4 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.hero h1{
+    font-size: 6rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    transition: transform .2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero a:hover{
+    transform: scale(1.1);
+}
+
+/* Walls */
+
+.walls h1{
+    margin: 10px 0 10px 0;
+    font-size: 4rem;
+}
+
+.walls h1 span, .omoge h1 span, .newsletter h1 span{
+    color: #fff;
+    background-color: #0C3A5B;
+    padding: 3px 8px;
+    border-radius: 15px;
+    outline: none;
+    display: inline-block;
+}
+
+.walls p{
+    line-height: 1.8rem;
+}
+
+.walls p span{
+    color: #0C3A5B;
+    display: inline-block;
+    font-size: 5rem;
+    line-height: 1.5rem;
+}
+
+/* Blog */
+
+.blog-btn {
+    color: #fff;
+    background-color: #0C3A5B;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 5px 0;
+}
+
+.blog-btn:hover{
+    background-color: #062847;
+}
+
+/* Omoge */
+
+.omoge h1{
+    font-size: 4rem;
+    margin: 10px 0 10px 0;
+}
+
+
+.omoge p span a{
+    color: #0C3A5B;
+    text-decoration: none;
+}
+
+.omoge p{
+    line-height: 1.8rem;
+}
+
+.apply-button{
+    text-decoration: none;
+    color: #fff;
+    background-color: #0C3A5B;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Newsletter */
+
+.newsletter{
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+
+.newsletter h1{
+    font-size: 4rem;
+    margin: 10px 0 10px 0;
+}
+
+.newsletter img{
+    border: none;
+    border-radius: 10px;
+}
+
+.newsletter-form{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.newsletter-form h2{
+    font-size: 2rem;
+    color: #fff;
+    background-color: #0C3A5B;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+#label{
+    float: left;
+}
+
+.form-input {
+    border: none;
+    outline: none;
+    background-color: #dfe9f5;
+}
+
+.form-button{
+    width: 70%;
+    margin: 10px 0 10px 0;
+    background-color: #0C3A5B;
+    border: none;
+    outline: none;
+}
+
+.form-button:hover{
+    background-color: #062847;
+}
+
+/* Testimonials */
+
+.testimonial-section{
+    background-color: #dfe9f5;
+}
+
+.testimonial-section h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.testimonials{
+    box-sizing: border-box;
+    margin: 20px 0 20px 0;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Footer */
+
+footer{
+    background-color: #181818;
+    color: #fff;
+    padding: 20px 0 20px 0;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0.8;
+    align-items: center;
+}
+
+.footer-links a{
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer button{
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    width: 60%;
+}

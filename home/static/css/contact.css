@@ -1,0 +1,115 @@
+/* Global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Image */
+
+.hero-container {
+    background-image: url("Happy_Family2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    position: fixed;
+}
+
+/* Contact Information */
+
+.contact-information{
+    width: 100vw;
+    height: 50vh;
+    background-color: #fff;
+    margin-top: 25%;
+    padding: 20px 0 20px;
+}
+
+.contact-information h2{
+    font-size: 3rem;
+}
+
+.contact-information h2 span,.appointment div > h2 span, .contact-social-media div> h2 span, .prayer-request div > h2 span{
+    color: #fff;
+    background-color: #0C3A5B;
+    padding: 3px 8px;
+    border-radius: 15px;
+    outline: none;
+    display: inline-block;
+}
+
+/* Appointment */
+
+.appointment{
+    width: 100vw;
+    height: auto;
+    background-color: #dfe9f5;
+    padding: 20px 0;
+}
+
+.appointment div > h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.appointment label, input[type='text']{
+    display: block;
+}
+
+.row{
+    align-items: center;
+}
+
+/* Social Media */
+
+.contact-social-media{
+    background-color: #fff;
+    width: 100vw;
+    padding: 20px 0;
+    height: auto;
+}
+
+.contact-social-media div> h2{
+    font-size: 2.5rem;
+}
+
+.contact-social-media ul{
+    text-align: center;
+}
+
+/* Frquest Questions Asked */
+
+/* Prayer Request */
+
+.prayer-request{
+    background-color: #fff;
+    width: 100vw;
+    padding: 20px 0;
+    height: auto;
+}
+
+.prayer-request div> h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.prayer-request form input, .prayer-request form textarea{
+    background-color: #dfe9f5;
+}
+
+.btn{
+    background-color: #0C3A5B !important;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #062847;
+}
+
