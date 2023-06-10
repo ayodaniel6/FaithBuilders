@@ -113,3 +113,26 @@
     background-color: #062847;
 }
 
+@media(max-width:600px){
+    .hero-container{
+        display: grid;
+        width: 100%;
+    }
+    .contact-information{
+        display: grid;
+        width: 100vw;
+        margin-top: 75%;
+    }
+    .contact-information h2, .appointment div > h2{
+        font-size: 1.5rem;
+    }
+    .appointment div > h2,.contact-social-media div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact-social-media div > h2{
+        font-size: 2rem;
+    }
+}
+

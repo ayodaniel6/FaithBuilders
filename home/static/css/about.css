@@ -119,3 +119,25 @@ footer button{
     width: 60%;
 }
 
+@media(max-width:600px){
+    .hero-container{
+        display: grid;
+        width: 100%;
+    }
+    .about, .newsletter{
+        display: grid;
+        width: 100vw;
+    }
+    .about div > h1, .newsletter div > h1{
+        font-size: 1.5rem;
+    }
+    .about{
+        margin-top: 75%;
+    }
+    .newsletter{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
+
+

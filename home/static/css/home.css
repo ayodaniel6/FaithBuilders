@@ -51,7 +51,6 @@ nav ul li a:hover, .active{
     text-decoration: none;
 }
 
-
 /* Hero styles */
 
 .hero-container {
@@ -108,7 +107,7 @@ nav ul li a:hover, .active{
     font-size: 4rem;
 }
 
-.walls h1 span, .omoge h1 span, .newsletter h1 span{
+.walls h1 span, .omoge h1 span, .newsletter h1 span, .post h1 span{
     color: #fff;
     background-color: #0C3A5B;
     padding: 3px 8px;
@@ -129,6 +128,11 @@ nav ul li a:hover, .active{
 }
 
 /* Blog */
+
+.post h1{
+    font-size: 4rem;
+    margin: 10px 0 10px 0;
+}
 
 .blog-btn {
     color: #fff;
@@ -289,4 +293,61 @@ footer button{
     color: #fff;
     cursor: pointer;
     width: 60%;
+}
+
+/* Responsiveness */
+
+@media (max-width:600px) {
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    nav ul li{
+        margin: 0 5px;
+    }
+    .brand{
+        font-size: 1rem;
+    }
+    .hero-container{
+        display: grid;
+        width: 100%;
+    }
+    .hero{
+        width: 100%;
+        float: left;
+        margin-top: 30px;
+    }
+    .hero h1{
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    .hero h2, .walls h1, .post h1, .newsletter h1, .testimonial-section h1{
+        font-size: 2rem;
+    }
+    .hero h4{
+        font-size: 1rem;
+    }
+    .hero a{
+        display: block;
+        text-align: start;
+        padding: 3px 8px;
+
+    }
+    .walls div, .post h1, .omoge div, .hero h1, .walls h1, .newsletter h1, .newsletter div{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .walls div > img, .omoge div > img, .newsletter div > img{
+        width: 100%;
+    }
+    .post{
+        row-gap: 10px;
+    }
+    .newsletter-form{
+        margin-top: 10px;
+    }
+    footer div {
+        margin-bottom: 20px;
+    }
+
 }

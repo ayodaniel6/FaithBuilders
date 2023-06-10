@@ -32,8 +32,8 @@
         <!-- Walls -->
 
         <section class="container-md walls">
+          <h1 class="text-center">Broken <span>walls</span> of Homes</h1>
           <div class="row align-items-center">
-            <h1 class="text-center">Broken <span>walls</span> of Homes</h1>
             <div class="col-md-6">
               <p><span>L</span>orem ipsum dolor sit amet consectetur adipisicing elit. 
                   Vel ad sapiente rem nobis mollitia totam optio temporibus nemo. 
@@ -59,14 +59,15 @@
       <!-- Blog Posts -->
 
       <section class="container-md post">
+        <h1 class="text-center"><span>Awareness</span></h1>
           <div class="row align-items-center">
 
             {% for post in posts %}
 
             {% if post.published %}
 
-            <div class="col">
-              <div class="card" style="width: 18rem;">
+            <div class="col-md-4">
+              <div class="card">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{ post.title }}</h5>
@@ -84,8 +85,8 @@
 
       <!-- Omoge Initiatives -->
 
-      <section class="container-fluid">
-        <div class="container-md omoge">
+      <section class="container-fluid omoge">
+        <div class="container-md">
           <h1 class="text-center">Looking to <span>Grow?</span></h1>
           <div class="row align-items-center">
 
@@ -101,7 +102,7 @@
                   possimus repellendus perferendis officiis doloribus accusamus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum necessitatibus nemo impedit. 
                   Earum recusandae iusto adipisci quod. Maiores minima voluptates itaque illo eos eligendi sit facere, quas possimus error vitae? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit assumenda, laudantium totam esse nobis praesentium impedit suscipit nihil eveniet quidem maxime enim officiis explicabo, 
                   sed asperiores expedita fuga ad quisquam.</p>
-                  <a role="button" class="apply-button" href="#">Apply</a>
+                  <a role="button" class="apply-button text-center" href="#">Apply</a>
             </div>
 
           </div>
@@ -111,33 +112,34 @@
 
       <!-- Newsletter -->
 
-      <section class="container-md">
-        <div class="row newsletter">
-
+      <section class="container-fluid newsletter">
+        <div class="container-md">
           <h1 class="text-center"><span>Join</span> our Newsletter</h1>
-
-              <div class="col">
-                <img src="{% static 'images/stacking-hands.png' %}" alt="">
-              </div>
-            
-              <div class="col">
-                <div class="newsletter-form">
-                  
-                    <h2>Subscribe to our Newsletter</h2>
-                      
-                      <form method="POST">
-      
-                        <label class="form-label" id="label" for="email">Email Address:</label>
-                        <input class="form-control form-input" type="email" name="email" placeholder="Email address">
+          <div class="row">
+  
+                <div class="col">
+                  <img src="{% static 'images/stacking-hands.png' %}" alt="">
+                </div>
+              
+                <div class="col">
+                  <div class="newsletter-form">
+                    
+                      <h2>Subscribe to our Newsletter</h2>
+                        
+                        <form method="POST">
         
-                        <input class="btn btn-primary form-button" type="submit" value="Subscribe">
-        
-                      </form>
+                          <label class="form-label" id="label" for="email">Email Address:</label>
+                          <input class="form-control form-input" type="email" name="email" placeholder="Email address">
+          
+                          <input class="btn btn-primary form-button" type="submit" value="Subscribe">
+          
+                        </form>
+                      </div>
                     </div>
                   </div>
-                </div>
-          </div>
-
+            </div>
+  
+        </section>
       </section>
 
       <!-- Testimonials -->
@@ -188,11 +190,6 @@
 
       {% endblock %}
 
-      <!-- Footer -->
-
-      {% block footer %}
-
-      {% endblock %}
 
 </body>
 </html>
